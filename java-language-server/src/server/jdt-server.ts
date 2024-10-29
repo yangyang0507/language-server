@@ -17,17 +17,17 @@ export class JDTLanguageServer {
         switch (platform) {
             case 'linux':
                 if (arch === 'x64') return 'config_linux';
-                if (arch === 'arm64') return 'config_linux_aarch64';
+                if (arch === 'arm64') return 'config_linux_arm';
                 throw new Error(`Unsupported Linux architecture: ${arch}`);
             
             case 'darwin':
                 if (arch === 'x64') return 'config_mac';
-                if (arch === 'arm64') return 'config_mac_aarch64';
+                if (arch === 'arm64') return 'config_mac_arm';
                 throw new Error(`Unsupported macOS architecture: ${arch}`);
             
             case 'win32':
                 if (arch === 'x64') return 'config_win';
-                if (arch === 'arm64') return 'config_win_arm64';
+                if (arch === 'arm64') return 'config_win';
                 throw new Error(`Unsupported Windows architecture: ${arch}`);
             
             default:

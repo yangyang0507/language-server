@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Eclipse JDT files
+resources/jdt-language-server-*/config*/org.eclipse*

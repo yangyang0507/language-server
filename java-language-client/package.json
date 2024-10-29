@@ -1,0 +1,29 @@
+{
+  "name": "example-client-vite",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "monaco-editor": "npm:@codingame/monaco-vscode-editor-api@~10.1.1",
+    "monaco-editor-wrapper": "~6.0.0-next.5",
+    "monaco-languageclient-examples": "~2024.10.4",
+    "vscode": "npm:@codingame/monaco-vscode-api@~10.1.1"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.94.0",
+    "shx": "~0.3.4",
+    "vite": "~5.4.8"
+  },
+  "volta": {
+    "node": "20.18.0",
+    "npm": "10.8.3"
+  },
+  "scripts": {
+    "verify": "npm install && npm run build && npm run start",
+    "verify:ci": "npm install && npm run build",
+    "clean": "shx rm -fr dist",
+    "dev": "npm run build && vite preview",
+    "build": "npm run clean && vite build",
+    "start": "vite preview"
+  }
+}
